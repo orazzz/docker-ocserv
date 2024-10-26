@@ -2,6 +2,10 @@
 
 docker-ocserv is an OpenConnect VPN Server boxed in a Docker image which is modified from [docker-ocserv](https://github.com/TommyLau/docker-ocserv).
 
+## Updates
+- 2024-10-26
+  - update ocserv version to: 1.3.0
+  - suport occtl, eg: show current online users
 
 ## What is OpenConnect Server?
 
@@ -107,6 +111,12 @@ docker run --name ocserv --privileged -p 443:443 -p 443:443/udp -e CA_CN="My CA"
 ### User operations
 
 All the users opertaions happened while the container is running. If you used a different container name other than `ocserv`, then you have to change the container name accordingly.
+
+#### Show online users
+
+```bash
+docker exec -it ocserv occtl -n show users
+```
 
 #### Add user
 
