@@ -35,7 +35,7 @@ it will create the files in the directory /etc/ocserv/certs
 Get the docker image by running the following commands:
 
 ```bash
-docker pull henry42/docker-ocserv
+docker pull ghcr.io/orazzz/docker-ocserv:master
 ```
 
 Start an ocserv instance:
